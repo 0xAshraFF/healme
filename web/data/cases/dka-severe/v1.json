@@ -1,0 +1,3761 @@
+{
+  "id": "dka-severe",
+  "version": 1,
+  "status": "published",
+  "author": "Pilot author (pending clinician)",
+  "reviewer": "Pilot reviewer (pending clinician)",
+  "def": {
+    "id": "dka-severe",
+    "version": 1,
+    "level": "fcps1",
+    "diagnosisLabel": "Diabetic ketoacidosis, severe",
+    "sex": "F",
+    "age": 34,
+    "weightKg": 52,
+    "allergy": "none",
+    "ward": "Medicine Ward B",
+    "bed": "12",
+    "estMinutes": 25,
+    "complaint": "Vomiting since yesterday, drowsy, breathing fast",
+    "history": "{first} has had type 1 diabetes since age 19. She ran out of insulin 4 days ago and could not buy more. Vomiting since yesterday evening with central abdominal pain; drowsy since this afternoon. No fever, cough or urinary symptoms. Brought in by her husband at 02:10.",
+    "exam": "Drowsy, GCS 13. Dry tongue, sunken eyes. Deep sighing respiration, ketotic breath. Abdomen soft, mild diffuse tenderness, no guarding. Chest clear.",
+    "source": {
+      "label": "Composite teaching case based on open-access DKA case reports",
+      "license": "CC-BY 4.0"
+    },
+    "authors": [
+      "Pilot author (pending clinician)"
+    ],
+    "reviewers": [
+      "Pilot reviewer (pending clinician)"
+    ],
+    "investigations": [
+      {
+        "id": "grbs",
+        "name": "GRBS (capillary glucose)",
+        "kind": "bedside"
+      },
+      {
+        "id": "vbg",
+        "name": "Venous blood gas",
+        "kind": "bedside"
+      },
+      {
+        "id": "k_vbg",
+        "name": "Serum K+ (on VBG)",
+        "kind": "bedside"
+      },
+      {
+        "id": "ketones_blood",
+        "name": "Blood ketones (bedside meter)",
+        "kind": "bedside"
+      },
+      {
+        "id": "urine_ketones",
+        "name": "Urine dipstick ketones",
+        "kind": "bedside"
+      },
+      {
+        "id": "ecg",
+        "name": "ECG",
+        "kind": "bedside"
+      },
+      {
+        "id": "preg",
+        "name": "Urine pregnancy test",
+        "kind": "bedside"
+      },
+      {
+        "id": "lytes",
+        "name": "Serum electrolytes, urea, creatinine",
+        "kind": "lab"
+      },
+      {
+        "id": "cbc",
+        "name": "CBC",
+        "kind": "lab"
+      },
+      {
+        "id": "crp",
+        "name": "CRP",
+        "kind": "lab"
+      },
+      {
+        "id": "amylase",
+        "name": "Serum amylase",
+        "kind": "lab"
+      },
+      {
+        "id": "culture",
+        "name": "Blood culture",
+        "kind": "lab"
+      },
+      {
+        "id": "cxr",
+        "name": "Chest X-ray",
+        "kind": "lab"
+      },
+      {
+        "id": "urine_re",
+        "name": "Urine R/E",
+        "kind": "lab"
+      }
+    ],
+    "essentialInvestigations": [
+      "grbs",
+      "vbg",
+      "k_vbg",
+      "ketones_blood",
+      "ecg",
+      "lytes"
+    ],
+    "investigationBudget": 10,
+    "diagnoses": {
+      "options": [
+        {
+          "id": "dka_severe",
+          "label": "Diabetic ketoacidosis, severe"
+        },
+        {
+          "id": "dka_mild",
+          "label": "Diabetic ketoacidosis, mild/moderate"
+        },
+        {
+          "id": "hhs",
+          "label": "Hyperosmolar hyperglycaemic state"
+        },
+        {
+          "id": "pancreatitis",
+          "label": "Acute pancreatitis"
+        },
+        {
+          "id": "sepsis",
+          "label": "Sepsis with metabolic acidosis"
+        },
+        {
+          "id": "gastro",
+          "label": "Acute gastroenteritis with dehydration"
+        }
+      ],
+      "correct": [
+        "dka_severe"
+      ],
+      "acceptable": [
+        "dka_mild"
+      ]
+    },
+    "drugs": [
+      {
+        "id": "nacl",
+        "short": "NaCl 0.9%",
+        "name": "Sodium chloride 0.9%",
+        "brands": [
+          "Normal saline"
+        ],
+        "classTags": [
+          "crystalloid"
+        ],
+        "kind": "fluid",
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mL/h",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 249
+              },
+              {
+                "band": "therapeutic",
+                "min": 250,
+                "max": 1000
+              },
+              {
+                "band": "high",
+                "min": 1001,
+                "max": 2000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hartmann",
+        "short": "Hartmann's",
+        "name": "Hartmann's solution",
+        "brands": [
+          "Ringer's lactate"
+        ],
+        "classTags": [
+          "crystalloid"
+        ],
+        "kind": "fluid",
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mL/h",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 249
+              },
+              {
+                "band": "therapeutic",
+                "min": 250,
+                "max": 1000
+              },
+              {
+                "band": "high",
+                "min": 1001,
+                "max": 2000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dex10",
+        "short": "Glucose 10%",
+        "name": "Glucose 10%",
+        "brands": [
+          "Dextrose 10%"
+        ],
+        "classTags": [
+          "glucose"
+        ],
+        "kind": "fluid",
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mL/h",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 74
+              },
+              {
+                "band": "therapeutic",
+                "min": 75,
+                "max": 150
+              },
+              {
+                "band": "high",
+                "min": 151,
+                "max": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "insulin",
+        "short": "Insulin",
+        "name": "Insulin, soluble (regular)",
+        "brands": [
+          "Insulin Regular",
+          "Actrapid",
+          "Insulin R"
+        ],
+        "classTags": [
+          "insulin"
+        ],
+        "routes": [
+          {
+            "id": "iv_infusion",
+            "label": "IV infusion",
+            "unit": "U/h",
+            "perKg": true,
+            "bands": [
+              {
+                "band": "low",
+                "min": 0.001,
+                "max": 0.049
+              },
+              {
+                "band": "therapeutic",
+                "min": 0.05,
+                "max": 0.149
+              },
+              {
+                "band": "high",
+                "min": 0.15,
+                "max": 0.3
+              }
+            ]
+          },
+          {
+            "id": "iv_bolus",
+            "label": "IV bolus",
+            "unit": "U",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "high",
+                "min": 0.1,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "id": "sc",
+            "label": "SC",
+            "unit": "U",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 0.1,
+                "max": 3
+              },
+              {
+                "band": "therapeutic",
+                "min": 3.1,
+                "max": 20
+              },
+              {
+                "band": "high",
+                "min": 20.1,
+                "max": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "glargine",
+        "short": "Glargine",
+        "name": "Insulin glargine (long-acting)",
+        "brands": [
+          "Lantus",
+          "Glarine",
+          "Basalog"
+        ],
+        "classTags": [
+          "insulin",
+          "basal-insulin"
+        ],
+        "routes": [
+          {
+            "id": "sc",
+            "label": "SC once daily",
+            "unit": "U",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 0.1,
+                "max": 3.9
+              },
+              {
+                "band": "therapeutic",
+                "min": 4,
+                "max": 30
+              },
+              {
+                "band": "high",
+                "min": 30.1,
+                "max": 50
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kcl",
+        "short": "KCl",
+        "name": "Potassium chloride",
+        "brands": [
+          "KCl 15%"
+        ],
+        "classTags": [
+          "potassium"
+        ],
+        "routes": [
+          {
+            "id": "in_fluid",
+            "label": "added to each litre of IV fluid",
+            "unit": "mmol/L",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 19
+              },
+              {
+                "band": "therapeutic",
+                "min": 20,
+                "max": 40
+              },
+              {
+                "band": "high",
+                "min": 41,
+                "max": 60
+              }
+            ]
+          }
+        ],
+        "dangerousRoutes": [
+          {
+            "id": "iv_push",
+            "label": "IV push (undiluted)"
+          }
+        ]
+      },
+      {
+        "id": "bicarb",
+        "short": "NaHCO3",
+        "name": "Sodium bicarbonate 8.4%",
+        "classTags": [
+          "alkali"
+        ],
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mmol",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 49
+              },
+              {
+                "band": "therapeutic",
+                "min": 50,
+                "max": 100
+              },
+              {
+                "band": "high",
+                "min": 101,
+                "max": 150
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ceftriaxone",
+        "short": "Ceftriaxone",
+        "name": "Ceftriaxone",
+        "brands": [
+          "Ceftron",
+          "Traxon",
+          "Oricef"
+        ],
+        "classTags": [
+          "antibiotic",
+          "cephalosporin"
+        ],
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mg",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 499
+              },
+              {
+                "band": "therapeutic",
+                "min": 500,
+                "max": 2000
+              },
+              {
+                "band": "high",
+                "min": 2001,
+                "max": 4000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ondansetron",
+        "short": "Ondansetron",
+        "name": "Ondansetron",
+        "brands": [
+          "Emistat",
+          "Onaseron"
+        ],
+        "classTags": [
+          "antiemetic"
+        ],
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mg",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 0.1,
+                "max": 1.9
+              },
+              {
+                "band": "therapeutic",
+                "min": 2,
+                "max": 8
+              },
+              {
+                "band": "high",
+                "min": 8.1,
+                "max": 16
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "furosemide",
+        "short": "Furosemide",
+        "name": "Furosemide",
+        "brands": [
+          "Lasix",
+          "Frusin"
+        ],
+        "classTags": [
+          "loop-diuretic"
+        ],
+        "routes": [
+          {
+            "id": "iv",
+            "label": "IV",
+            "unit": "mg",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "low",
+                "min": 1,
+                "max": 9
+              },
+              {
+                "band": "therapeutic",
+                "min": 10,
+                "max": 80
+              },
+              {
+                "band": "high",
+                "min": 81,
+                "max": 160
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mon_grbs",
+        "name": "Hourly capillary glucose",
+        "classTags": [],
+        "kind": "monitoring",
+        "routes": [
+          {
+            "id": "order",
+            "label": "order",
+            "unit": "",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "therapeutic",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mon_vbg",
+        "name": "2-hourly VBG with K+, then 4-hourly",
+        "classTags": [],
+        "kind": "monitoring",
+        "routes": [
+          {
+            "id": "order",
+            "label": "order",
+            "unit": "",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "therapeutic",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mon_ketones",
+        "name": "Hourly blood ketones",
+        "classTags": [],
+        "kind": "monitoring",
+        "routes": [
+          {
+            "id": "order",
+            "label": "order",
+            "unit": "",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "therapeutic",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mon_io",
+        "name": "Strict input/output chart",
+        "classTags": [],
+        "kind": "monitoring",
+        "routes": [
+          {
+            "id": "order",
+            "label": "order",
+            "unit": "",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "therapeutic",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mon_cardiac",
+        "name": "Cardiac monitor",
+        "classTags": [],
+        "kind": "monitoring",
+        "routes": [
+          {
+            "id": "order",
+            "label": "order",
+            "unit": "",
+            "perKg": false,
+            "bands": [
+              {
+                "band": "therapeutic",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "caseHarmList": [
+      {
+        "id": "case-loop-diuretic",
+        "classTag": "loop-diuretic",
+        "state": "H_shock",
+        "reason": "She is severely volume depleted. A diuretic worsens shock and kidney injury.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fluid replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+            "section": "Diabetes mellitus: diabetic ketoacidosis",
+            "year": 2023
+          }
+        ]
+      }
+    ],
+    "globalHarmStates": {
+      "global-kcl-push": "H_arrest",
+      "global-dangerous-dose": "H_adverse"
+    },
+    "dangerousDoseStates": {
+      "insulin": "H_hypo",
+      "glargine": "H_hypo",
+      "nacl": "H_overload",
+      "hartmann": "H_overload",
+      "dex10": "H_overload",
+      "kcl": "H_arrest"
+    },
+    "checkpoints": [
+      "T0",
+      "6h",
+      "D2",
+      "D5"
+    ],
+    "initialState": "T0",
+    "states": {
+      "T0": {
+        "id": "T0",
+        "checkpoint": "T0",
+        "facts": {
+          "glucose": 34,
+          "ph": 7.08,
+          "hco3": 8,
+          "k": 4.6,
+          "na": 131,
+          "creat": 1.6,
+          "ketones": 6.2
+        },
+        "vitals": {
+          "hr": 124,
+          "sbp": 96,
+          "dbp": 60,
+          "rr": 30,
+          "spo2": 98,
+          "gcs": 13,
+          "temp": 37.2,
+          "grbs": "HI"
+        },
+        "results": {
+          "grbs": {
+            "value": "HI (>33.3 mmol/L)",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.08 · HCO3 8 · lactate 2.1",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "4.6 mmol/L"
+          },
+          "ketones_blood": {
+            "value": "6.2 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus tachycardia 124/min. Normal T waves."
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 131 · K 4.7 · Urea 58 mg/dL · Creat 1.6 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 13.8 · Hb 13.1 · Plt 310"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 92 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose +++, ketones +++, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "02:12",
+          "text": "Drowsy but answers to name. Vomited twice in ER. Husband says she ran out of insulin.",
+          "highlight": "ran out of insulin"
+        }
+      },
+      "S6_good": {
+        "id": "S6_good",
+        "checkpoint": "6h",
+        "facts": {
+          "glucose": 13.5,
+          "ph": 7.24,
+          "hco3": 13,
+          "k": 4.1,
+          "na": 136,
+          "creat": 1.3,
+          "ketones": 2.8,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 102,
+          "sbp": 112,
+          "dbp": 70,
+          "rr": 22,
+          "spo2": 98,
+          "gcs": 15,
+          "grbs": 13.5
+        },
+        "results": {
+          "grbs": {
+            "value": "13.5 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.24 · HCO3 13",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "4.1 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "2.8 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 136 · K 4.1 · Creat 1.3 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Night nurse handover",
+          "time": "08:15",
+          "text": "Feeling better, talking. Urine 450 mL since admission. Asked for water.",
+          "highlight": "Urine 450 mL since admission."
+        }
+      },
+      "S6_lowK": {
+        "id": "S6_lowK",
+        "checkpoint": "6h",
+        "facts": {
+          "glucose": 13.5,
+          "ph": 7.23,
+          "hco3": 13,
+          "k": 3.3,
+          "na": 136,
+          "creat": 1.3,
+          "ketones": 2.9,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 104,
+          "sbp": 112,
+          "dbp": 70,
+          "rr": 22,
+          "spo2": 98,
+          "gcs": 15,
+          "grbs": 13.5
+        },
+        "results": {
+          "grbs": {
+            "value": "13.5 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.23 · HCO3 13",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "3.3 mmol/L",
+            "abnormal": true
+          },
+          "ketones_blood": {
+            "value": "2.9 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 136 · K 3.3 · Creat 1.3 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Night nurse handover",
+          "time": "08:15",
+          "text": "Feeling better, talking. Urine 400 mL since admission. Says her legs feel heavy.",
+          "highlight": "legs feel heavy"
+        }
+      },
+      "S6_dry": {
+        "id": "S6_dry",
+        "checkpoint": "6h",
+        "facts": {
+          "glucose": 19,
+          "ph": 7.14,
+          "hco3": 10,
+          "k": 3.9,
+          "na": 134,
+          "creat": 1.9,
+          "ketones": 4.1,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 118,
+          "sbp": 92,
+          "dbp": 58,
+          "rr": 26,
+          "spo2": 98,
+          "gcs": 14,
+          "grbs": 19
+        },
+        "results": {
+          "grbs": {
+            "value": "19 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.14 · HCO3 10",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "3.9 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "4.1 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 134 · K 3.9 · Creat 1.9 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Night nurse handover",
+          "time": "08:15",
+          "text": "Still drowsy. Only 60 mL urine since admission. Lips dry.",
+          "highlight": "Only 60 mL urine"
+        },
+        "event": "Still dry, poor urine"
+      },
+      "S6_ketotic": {
+        "id": "S6_ketotic",
+        "checkpoint": "6h",
+        "facts": {
+          "glucose": 28,
+          "ph": 7.06,
+          "hco3": 7,
+          "k": 4.9,
+          "na": 132,
+          "creat": 1.6,
+          "ketones": 5.9,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 120,
+          "sbp": 100,
+          "dbp": 62,
+          "rr": 30,
+          "spo2": 98,
+          "gcs": 13,
+          "grbs": 28
+        },
+        "results": {
+          "grbs": {
+            "value": "28 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.06 · HCO3 7",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "4.9 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "5.9 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 132 · K 4.9 · Creat 1.6 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Night nurse handover",
+          "time": "08:15",
+          "text": "No better. Vomited twice more. Breathing still deep and fast.",
+          "highlight": "No better."
+        },
+        "event": "Acidosis not improving"
+      },
+      "S6_fast": {
+        "id": "S6_fast",
+        "checkpoint": "6h",
+        "facts": {
+          "glucose": 6.4,
+          "ph": 7.2,
+          "hco3": 12,
+          "k": 3.4,
+          "na": 137,
+          "creat": 1.3,
+          "ketones": 3,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 108,
+          "sbp": 110,
+          "dbp": 70,
+          "rr": 22,
+          "spo2": 98,
+          "gcs": 15,
+          "grbs": 6.4
+        },
+        "results": {
+          "grbs": {
+            "value": "6.4 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.20 · HCO3 12",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "3.4 mmol/L",
+            "abnormal": true
+          },
+          "ketones_blood": {
+            "value": "3 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 137 · K 3.4 · Creat 1.3 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Night nurse handover",
+          "time": "08:15",
+          "text": "Sweaty and shaky at 07:30. Sugar dropping fast on the chart.",
+          "highlight": "Sugar dropping fast"
+        },
+        "event": "Glucose fell too fast"
+      },
+      "S6_slow": {
+        "id": "S6_slow",
+        "checkpoint": "6h",
+        "facts": {
+          "glucose": 20,
+          "ph": 7.15,
+          "hco3": 10,
+          "k": 4,
+          "na": 134,
+          "creat": 1.5,
+          "ketones": 4,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 112,
+          "sbp": 104,
+          "dbp": 66,
+          "rr": 26,
+          "spo2": 98,
+          "gcs": 14,
+          "grbs": 20
+        },
+        "results": {
+          "grbs": {
+            "value": "20 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.15 · HCO3 10",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "4 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "4 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 134 · K 4 · Creat 1.5 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Night nurse handover",
+          "time": "08:15",
+          "text": "A little more alert. Urine 200 mL since admission.",
+          "highlight": "A little more alert."
+        }
+      },
+      "D2_good": {
+        "id": "D2_good",
+        "checkpoint": "D2",
+        "facts": {
+          "glucose": 8.4,
+          "ph": 7.36,
+          "hco3": 20,
+          "k": 4.2,
+          "na": 138,
+          "creat": 1,
+          "ketones": 0.4,
+          "resolved": true
+        },
+        "vitals": {
+          "hr": 86,
+          "sbp": 118,
+          "dbp": 76,
+          "rr": 16,
+          "spo2": 99,
+          "gcs": 15,
+          "grbs": 8.4
+        },
+        "results": {
+          "grbs": {
+            "value": "8.4 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.36 · HCO3 20",
+            "abnormal": false
+          },
+          "k_vbg": {
+            "value": "4.2 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "0.4 mmol/L",
+            "abnormal": false
+          },
+          "urine_ketones": {
+            "value": "trace",
+            "abnormal": false
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 138 · K 4.2 · Creat 1 mg/dL",
+            "abnormal": false
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "07:40",
+          "text": "Eating breakfast. No complaints. Asking when she can go home.",
+          "highlight": "Asking when she can go home."
+        }
+      },
+      "D2_hypoK": {
+        "id": "D2_hypoK",
+        "checkpoint": "D2",
+        "facts": {
+          "glucose": 9.8,
+          "ph": 7.31,
+          "hco3": 17,
+          "k": 3.1,
+          "na": 137,
+          "creat": 1.1,
+          "ketones": 0.8,
+          "resolved": false,
+          "hypok": true
+        },
+        "vitals": {
+          "hr": 118,
+          "sbp": 110,
+          "dbp": 72,
+          "rr": 18,
+          "spo2": 98,
+          "gcs": 15,
+          "grbs": 9.8
+        },
+        "results": {
+          "grbs": {
+            "value": "9.8 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.31 · HCO3 17",
+            "abnormal": false
+          },
+          "k_vbg": {
+            "value": "3.1 mmol/L",
+            "abnormal": true
+          },
+          "ketones_blood": {
+            "value": "0.8 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "trace",
+            "abnormal": false
+          },
+          "ecg": {
+            "value": "Sinus tachycardia. Flat T waves, U waves.",
+            "abnormal": true
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 137 · K 3.1 · Creat 1.1 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "07:40",
+          "text": "Complaining of palpitations and leg weakness. ECG done: flat T waves, U waves.",
+          "highlight": "palpitations and leg weakness."
+        },
+        "event": "Palpitations, U waves"
+      },
+      "D2_hypo": {
+        "id": "D2_hypo",
+        "checkpoint": "D2",
+        "facts": {
+          "glucose": 2.9,
+          "ph": 7.29,
+          "hco3": 16,
+          "k": 3.8,
+          "na": 138,
+          "creat": 1.1,
+          "ketones": 1.1,
+          "resolved": false,
+          "hypo": true
+        },
+        "vitals": {
+          "hr": 112,
+          "sbp": 116,
+          "dbp": 74,
+          "rr": 18,
+          "spo2": 98,
+          "gcs": 13,
+          "grbs": 2.9
+        },
+        "results": {
+          "grbs": {
+            "value": "2.9 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.29 · HCO3 16",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "3.8 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "1.1 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 138 · K 3.8 · Creat 1.1 mg/dL",
+            "abnormal": false
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "05:10",
+          "text": "Found sweaty and confused at 05:00, GRBS 2.9. Gave 10% glucose as per hypo protocol.",
+          "highlight": "sweaty and confused"
+        },
+        "event": "Hypoglycaemia overnight"
+      },
+      "D2_rebound": {
+        "id": "D2_rebound",
+        "checkpoint": "D2",
+        "facts": {
+          "glucose": 22,
+          "ph": 7.18,
+          "hco3": 11,
+          "k": 4.5,
+          "na": 135,
+          "creat": 1.3,
+          "ketones": 3.6,
+          "resolved": false,
+          "rebound": true
+        },
+        "vitals": {
+          "hr": 114,
+          "sbp": 106,
+          "dbp": 66,
+          "rr": 26,
+          "spo2": 98,
+          "gcs": 14,
+          "grbs": 22
+        },
+        "results": {
+          "grbs": {
+            "value": "22 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.18 · HCO3 11",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "4.5 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "3.6 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 135 · K 4.5 · Creat 1.3 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "07:40",
+          "text": "Vomiting again since midnight. Breathing fast. Drip was taken down yesterday.",
+          "highlight": "Vomiting again"
+        },
+        "event": "Ketoacidosis came back"
+      },
+      "D2_slow": {
+        "id": "D2_slow",
+        "checkpoint": "D2",
+        "facts": {
+          "glucose": 11,
+          "ph": 7.28,
+          "hco3": 15,
+          "k": 3.8,
+          "na": 137,
+          "creat": 1.2,
+          "ketones": 1.2,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 98,
+          "sbp": 112,
+          "dbp": 72,
+          "rr": 20,
+          "spo2": 98,
+          "gcs": 15,
+          "grbs": 11
+        },
+        "results": {
+          "grbs": {
+            "value": "11 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.28 · HCO3 15",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "3.8 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "1.2 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 137 · K 3.8 · Creat 1.2 mg/dL",
+            "abnormal": false
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "07:40",
+          "text": "Sitting up. Took some tea. Still a bit nauseated.",
+          "highlight": "Still a bit nauseated."
+        }
+      },
+      "D2_icu": {
+        "id": "D2_icu",
+        "checkpoint": "D2",
+        "facts": {
+          "glucose": 30,
+          "ph": 6.98,
+          "hco3": 5,
+          "k": 5.2,
+          "na": 131,
+          "creat": 2.4,
+          "ketones": 6.8,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 134,
+          "sbp": 84,
+          "dbp": 50,
+          "rr": 34,
+          "spo2": 95,
+          "gcs": 10,
+          "grbs": "HI"
+        },
+        "results": {
+          "grbs": {
+            "value": "30 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 6.98 · HCO3 5",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "5.2 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "6.8 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 131 · K 5.2 · Creat 2.4 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Duty doctor",
+          "time": "03:00",
+          "text": "GCS dropped to 10, BP 84/50. ICU team called and accepted transfer.",
+          "highlight": "ICU team called"
+        },
+        "outcome": "icu",
+        "outcomeNote": "Severe DKA progressed without adequate insulin and fluids.",
+        "event": "Transferred to ICU"
+      },
+      "D5_recovered": {
+        "id": "D5_recovered",
+        "checkpoint": "D5",
+        "facts": {
+          "glucose": 7.2,
+          "ph": 7.39,
+          "hco3": 24,
+          "k": 4.3,
+          "na": 139,
+          "creat": 0.9,
+          "ketones": 0.1,
+          "resolved": true
+        },
+        "vitals": {
+          "hr": 78,
+          "sbp": 120,
+          "dbp": 78,
+          "rr": 14,
+          "spo2": 99,
+          "gcs": 15,
+          "grbs": 7.2
+        },
+        "results": {
+          "grbs": {
+            "value": "7.2 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.39 · HCO3 24",
+            "abnormal": false
+          },
+          "k_vbg": {
+            "value": "4.3 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "0.1 mmol/L",
+            "abnormal": false
+          },
+          "urine_ketones": {
+            "value": "trace",
+            "abnormal": false
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 139 · K 4.3 · Creat 0.9 mg/dL",
+            "abnormal": false
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "10:00",
+          "text": "Doing her own insulin with the diabetes educator. Ready for discharge.",
+          "highlight": "Ready for discharge."
+        },
+        "outcome": "recovered"
+      },
+      "D5_complication": {
+        "id": "D5_complication",
+        "checkpoint": "D5",
+        "facts": {
+          "glucose": 7.8,
+          "ph": 7.38,
+          "hco3": 23,
+          "k": 4,
+          "na": 139,
+          "creat": 0.9,
+          "ketones": 0.2,
+          "resolved": true
+        },
+        "vitals": {
+          "hr": 82,
+          "sbp": 118,
+          "dbp": 76,
+          "rr": 14,
+          "spo2": 99,
+          "gcs": 15,
+          "grbs": 7.8
+        },
+        "results": {
+          "grbs": {
+            "value": "7.8 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.38 · HCO3 23",
+            "abnormal": false
+          },
+          "k_vbg": {
+            "value": "4 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "0.2 mmol/L",
+            "abnormal": false
+          },
+          "urine_ketones": {
+            "value": "trace",
+            "abnormal": false
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 139 · K 4 · Creat 0.9 mg/dL",
+            "abnormal": false
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "10:00",
+          "text": "Well now. Stayed an extra day for monitoring after the problem on day 2.",
+          "highlight": "extra day for monitoring"
+        },
+        "outcome": "complication"
+      },
+      "D5_relapse": {
+        "id": "D5_relapse",
+        "checkpoint": "D5",
+        "facts": {
+          "glucose": 9,
+          "ph": 7.35,
+          "hco3": 21,
+          "k": 4.1,
+          "na": 138,
+          "creat": 1,
+          "ketones": 0.3,
+          "resolved": true
+        },
+        "vitals": {
+          "hr": 84,
+          "sbp": 116,
+          "dbp": 74,
+          "rr": 15,
+          "spo2": 99,
+          "gcs": 15,
+          "grbs": 9
+        },
+        "results": {
+          "grbs": {
+            "value": "9 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.35 · HCO3 21",
+            "abnormal": false
+          },
+          "k_vbg": {
+            "value": "4.1 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "0.3 mmol/L",
+            "abnormal": false
+          },
+          "urine_ketones": {
+            "value": "trace",
+            "abnormal": false
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 138 · K 4.1 · Creat 1 mg/dL",
+            "abnormal": false
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "10:00",
+          "text": "Restarted on the drip on day 3 after ketones came back. Settled now.",
+          "highlight": "ketones came back"
+        },
+        "outcome": "complication"
+      },
+      "D5_icu": {
+        "id": "D5_icu",
+        "checkpoint": "D5",
+        "facts": {
+          "glucose": 8,
+          "ph": 7.33,
+          "hco3": 19,
+          "k": 2.7,
+          "na": 137,
+          "creat": 1,
+          "ketones": 0.4,
+          "resolved": false
+        },
+        "vitals": {
+          "hr": 140,
+          "sbp": 96,
+          "dbp": 60,
+          "rr": 20,
+          "spo2": 97,
+          "gcs": 15,
+          "grbs": 8
+        },
+        "results": {
+          "grbs": {
+            "value": "8 mmol/L",
+            "abnormal": false
+          },
+          "vbg": {
+            "value": "pH 7.33 · HCO3 19",
+            "abnormal": false
+          },
+          "k_vbg": {
+            "value": "2.7 mmol/L",
+            "abnormal": true
+          },
+          "ketones_blood": {
+            "value": "0.4 mmol/L",
+            "abnormal": false
+          },
+          "urine_ketones": {
+            "value": "trace",
+            "abnormal": false
+          },
+          "ecg": {
+            "value": "Sinus tachycardia. Flat T waves, U waves.",
+            "abnormal": true
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 137 · K 2.7 · Creat 1 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Duty doctor",
+          "time": "02:30",
+          "text": "Runs of ventricular tachycardia on the monitor. K+ 2.7. Moved to CCU.",
+          "highlight": "ventricular tachycardia"
+        },
+        "outcome": "icu"
+      },
+      "H_arrest": {
+        "id": "H_arrest",
+        "checkpoint": "harm",
+        "facts": {
+          "glucose": 20,
+          "ph": 7.1,
+          "hco3": 9,
+          "k": 8.9,
+          "na": 134,
+          "creat": 1.6,
+          "ketones": 5
+        },
+        "vitals": {
+          "hr": 0,
+          "sbp": 0,
+          "dbp": 0,
+          "rr": 0,
+          "spo2": 0,
+          "gcs": 3
+        },
+        "results": {
+          "grbs": {
+            "value": "20 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.10 · HCO3 9",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "8.9 mmol/L",
+            "abnormal": true
+          },
+          "ketones_blood": {
+            "value": "5 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 134 · K 8.9 · Creat 1.6 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "—",
+          "text": "Arrested within minutes of the potassium injection. CPR for 40 minutes. Not revived.",
+          "highlight": "Arrested within minutes"
+        },
+        "outcome": "died",
+        "outcomeNote": "Undiluted potassium given as an IV push.",
+        "event": "Cardiac arrest"
+      },
+      "H_hypo": {
+        "id": "H_hypo",
+        "checkpoint": "harm",
+        "facts": {
+          "glucose": 1.4,
+          "ph": 7.18,
+          "hco3": 11,
+          "k": 2.6,
+          "na": 136,
+          "creat": 1.4,
+          "ketones": 3
+        },
+        "vitals": {
+          "hr": 128,
+          "sbp": 104,
+          "dbp": 64,
+          "rr": 24,
+          "spo2": 96,
+          "gcs": 8,
+          "grbs": 1.4
+        },
+        "results": {
+          "grbs": {
+            "value": "1.4 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.18 · HCO3 11",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "2.6 mmol/L",
+            "abnormal": true
+          },
+          "ketones_blood": {
+            "value": "3 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus tachycardia. Flat T waves, U waves.",
+            "abnormal": true
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 136 · K 2.6 · Creat 1.4 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "—",
+          "text": "Seizure. GRBS 1.4, K+ 2.6. ICU called.",
+          "highlight": "Seizure."
+        },
+        "outcome": "icu",
+        "outcomeNote": "A dose in the dangerous range was given after the nurse questioned it.",
+        "event": "Severe hypoglycaemia, seizure"
+      },
+      "H_overload": {
+        "id": "H_overload",
+        "checkpoint": "harm",
+        "facts": {
+          "glucose": 18,
+          "ph": 7.16,
+          "hco3": 10,
+          "k": 3.8,
+          "na": 129,
+          "creat": 1.4,
+          "ketones": 3.8
+        },
+        "vitals": {
+          "hr": 126,
+          "sbp": 150,
+          "dbp": 92,
+          "rr": 34,
+          "spo2": 86,
+          "gcs": 12,
+          "grbs": 18
+        },
+        "results": {
+          "grbs": {
+            "value": "18 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.16 · HCO3 10",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "3.8 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "3.8 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 129 · K 3.8 · Creat 1.4 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Staff Nurse Shirin",
+          "time": "—",
+          "text": "Short of breath, frothy sputum, crackles to mid-zones. SpO2 86% on air. ICU called.",
+          "highlight": "SpO2 86% on air"
+        },
+        "outcome": "icu",
+        "outcomeNote": "IV fluid was run at a dangerous rate after the nurse questioned it.",
+        "event": "Pulmonary oedema"
+      },
+      "H_adverse": {
+        "id": "H_adverse",
+        "checkpoint": "harm",
+        "facts": {
+          "glucose": 22,
+          "ph": 7.12,
+          "hco3": 9,
+          "k": 4.2,
+          "na": 133,
+          "creat": 1.8,
+          "ketones": 4.5
+        },
+        "vitals": {
+          "hr": 132,
+          "sbp": 88,
+          "dbp": 52,
+          "rr": 28,
+          "spo2": 93,
+          "gcs": 12,
+          "grbs": 22
+        },
+        "results": {
+          "grbs": {
+            "value": "22 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.12 · HCO3 9",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "4.2 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "4.5 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 133 · K 4.2 · Creat 1.8 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Duty doctor",
+          "time": "—",
+          "text": "Serious reaction after the high dose. BP falling. ICU review.",
+          "highlight": "Serious reaction"
+        },
+        "outcome": "icu",
+        "outcomeNote": "A drug was given in the dangerous range after the nurse questioned it.",
+        "event": "Serious adverse drug reaction"
+      },
+      "H_shock": {
+        "id": "H_shock",
+        "checkpoint": "harm",
+        "facts": {
+          "glucose": 31,
+          "ph": 7.02,
+          "hco3": 6,
+          "k": 5.1,
+          "na": 133,
+          "creat": 2.8,
+          "ketones": 6
+        },
+        "vitals": {
+          "hr": 140,
+          "sbp": 78,
+          "dbp": 44,
+          "rr": 32,
+          "spo2": 96,
+          "gcs": 11,
+          "grbs": "HI"
+        },
+        "results": {
+          "grbs": {
+            "value": "31 mmol/L",
+            "abnormal": true
+          },
+          "vbg": {
+            "value": "pH 7.02 · HCO3 6",
+            "abnormal": true
+          },
+          "k_vbg": {
+            "value": "5.1 mmol/L",
+            "abnormal": false
+          },
+          "ketones_blood": {
+            "value": "6 mmol/L",
+            "abnormal": true
+          },
+          "urine_ketones": {
+            "value": "+++",
+            "abnormal": true
+          },
+          "ecg": {
+            "value": "Sinus rhythm. Normal T waves.",
+            "abnormal": false
+          },
+          "preg": {
+            "value": "Urine β-hCG negative"
+          },
+          "lytes": {
+            "value": "Na 133 · K 5.1 · Creat 2.8 mg/dL",
+            "abnormal": true
+          },
+          "cbc": {
+            "value": "WBC 11.2 · Hb 12.4 · Plt 296"
+          },
+          "crp": {
+            "value": "CRP 6 mg/L"
+          },
+          "amylase": {
+            "value": "Amylase 88 U/L"
+          },
+          "culture": {
+            "value": "No growth at 48 h"
+          },
+          "cxr": {
+            "value": "Lung fields clear"
+          },
+          "urine_re": {
+            "value": "Glucose ++, ketones +, no pus cells"
+          }
+        },
+        "nurseNote": {
+          "who": "Duty doctor",
+          "time": "—",
+          "text": "BP 78/44 after the diuretic, no urine for 3 hours. ICU transfer.",
+          "highlight": "no urine for 3 hours"
+        },
+        "outcome": "icu",
+        "outcomeNote": "A loop diuretic was given to a volume-depleted patient.",
+        "event": "Shock and AKI"
+      }
+    },
+    "transitions": [
+      {
+        "from": "T0",
+        "to": "6h",
+        "clock": "02:29 → 08:29",
+        "headline": "6 hours later",
+        "scene": "Ward round. Night nurse handing over.",
+        "defaultState": "S6_slow",
+        "rules": [
+          {
+            "id": "t0-no-insulin",
+            "priority": 1,
+            "kind": "response",
+            "when": {
+              "not": {
+                "fact": "insulin@iv_infusion.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            },
+            "then": "S6_ketotic",
+            "note": "No effective IV insulin"
+          },
+          {
+            "id": "t0-dry",
+            "priority": 2,
+            "kind": "response",
+            "when": {
+              "not": {
+                "any": [
+                  {
+                    "fact": "nacl.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  },
+                  {
+                    "fact": "hartmann.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": "S6_dry",
+            "note": "Insulin without enough fluid"
+          },
+          {
+            "id": "t0-too-fast",
+            "priority": 3,
+            "kind": "response",
+            "when": {
+              "fact": "insulin@iv_infusion.band",
+              "op": "in",
+              "value": [
+                "high"
+              ]
+            },
+            "then": "S6_fast",
+            "note": "Insulin rate too high"
+          },
+          {
+            "id": "t0-bicarb-lowk",
+            "priority": 4,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "bicarb.given",
+                  "op": "==",
+                  "value": true
+                },
+                {
+                  "not": {
+                    "fact": "kcl.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                }
+              ]
+            },
+            "then": "S6_lowK"
+          },
+          {
+            "id": "t0-no-kcl",
+            "priority": 5,
+            "kind": "response",
+            "when": {
+              "not": {
+                "fact": "kcl.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            },
+            "then": "S6_lowK",
+            "note": "Insulin and fluid, no potassium"
+          },
+          {
+            "id": "t0-good",
+            "priority": 6,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "insulin@iv_infusion.band",
+                  "op": "in",
+                  "value": [
+                    "therapeutic"
+                  ]
+                },
+                {
+                  "any": [
+                    {
+                      "fact": "nacl.band",
+                      "op": "in",
+                      "value": [
+                        "therapeutic",
+                        "high"
+                      ]
+                    },
+                    {
+                      "fact": "hartmann.band",
+                      "op": "in",
+                      "value": [
+                        "therapeutic",
+                        "high"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "fact": "kcl.band",
+                  "op": "in",
+                  "value": [
+                    "therapeutic",
+                    "high"
+                  ]
+                }
+              ]
+            },
+            "then": "S6_good"
+          }
+        ]
+      },
+      {
+        "from": "6h",
+        "to": "D2",
+        "clock": "08:29 → 07:40 next day",
+        "headline": "Next morning",
+        "scene": "Day 2. Morning round.",
+        "defaultState": "D2_slow",
+        "rules": [
+          {
+            "id": "6h-icu",
+            "priority": 1,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "ph",
+                  "op": "<",
+                  "value": 7.1
+                },
+                {
+                  "not": {
+                    "fact": "insulin@iv_infusion.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                }
+              ]
+            },
+            "then": "D2_icu"
+          },
+          {
+            "id": "6h-stop-insulin",
+            "priority": 2,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "ph",
+                  "op": "<",
+                  "value": 7.3
+                },
+                {
+                  "not": {
+                    "fact": "insulin@iv_infusion.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                }
+              ]
+            },
+            "then": "D2_rebound"
+          },
+          {
+            "id": "6h-hypok",
+            "priority": 3,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "insulin.given",
+                  "op": "==",
+                  "value": true
+                },
+                {
+                  "fact": "k",
+                  "op": "<",
+                  "value": 4.5
+                },
+                {
+                  "not": {
+                    "fact": "kcl.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                }
+              ]
+            },
+            "then": "D2_hypoK"
+          },
+          {
+            "id": "6h-hypo",
+            "priority": 4,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "glucose",
+                  "op": "<",
+                  "value": 14
+                },
+                {
+                  "fact": "insulin.given",
+                  "op": "==",
+                  "value": true
+                },
+                {
+                  "not": {
+                    "fact": "dex10.given",
+                    "op": "==",
+                    "value": true
+                  }
+                }
+              ]
+            },
+            "then": "D2_hypo"
+          },
+          {
+            "id": "6h-good",
+            "priority": 5,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "insulin@iv_infusion.band",
+                  "op": "in",
+                  "value": [
+                    "therapeutic",
+                    "high"
+                  ]
+                },
+                {
+                  "fact": "ph",
+                  "op": ">=",
+                  "value": 7.2
+                }
+              ]
+            },
+            "then": "D2_good"
+          }
+        ]
+      },
+      {
+        "from": "D2",
+        "to": "D5",
+        "clock": "Day 2 → Day 5",
+        "headline": "Three days later",
+        "scene": "Day 5. Discharge round.",
+        "defaultState": "D5_complication",
+        "rules": [
+          {
+            "id": "d2-hypok-untreated",
+            "priority": 1,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "hypok",
+                  "op": "==",
+                  "value": true
+                },
+                {
+                  "not": {
+                    "fact": "kcl.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                }
+              ]
+            },
+            "then": "D5_icu"
+          },
+          {
+            "id": "d2-hypok-treated",
+            "priority": 2,
+            "kind": "response",
+            "when": {
+              "fact": "hypok",
+              "op": "==",
+              "value": true
+            },
+            "then": "D5_complication"
+          },
+          {
+            "id": "d2-hypo",
+            "priority": 3,
+            "kind": "response",
+            "when": {
+              "fact": "hypo",
+              "op": "==",
+              "value": true
+            },
+            "then": "D5_complication"
+          },
+          {
+            "id": "d2-rebound",
+            "priority": 4,
+            "kind": "response",
+            "when": {
+              "fact": "rebound",
+              "op": "==",
+              "value": true
+            },
+            "then": "D5_relapse"
+          },
+          {
+            "id": "d2-no-cover",
+            "priority": 5,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "resolved",
+                  "op": "==",
+                  "value": true
+                },
+                {
+                  "not": {
+                    "fact": "glargine.given",
+                    "op": "==",
+                    "value": true
+                  }
+                },
+                {
+                  "not": {
+                    "fact": "insulin@sc.given",
+                    "op": "==",
+                    "value": true
+                  }
+                },
+                {
+                  "not": {
+                    "fact": "insulin@iv_infusion.band",
+                    "op": "in",
+                    "value": [
+                      "therapeutic",
+                      "high"
+                    ]
+                  }
+                }
+              ]
+            },
+            "then": "D5_relapse"
+          },
+          {
+            "id": "d2-good",
+            "priority": 6,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "resolved",
+                  "op": "==",
+                  "value": true
+                },
+                {
+                  "fact": "glargine.given",
+                  "op": "==",
+                  "value": true
+                }
+              ]
+            },
+            "then": "D5_recovered"
+          },
+          {
+            "id": "d2-slow-ok",
+            "priority": 7,
+            "kind": "response",
+            "when": {
+              "all": [
+                {
+                  "fact": "insulin@iv_infusion.band",
+                  "op": "in",
+                  "value": [
+                    "therapeutic",
+                    "high"
+                  ]
+                },
+                {
+                  "fact": "kcl.band",
+                  "op": "in",
+                  "value": [
+                    "therapeutic",
+                    "high"
+                  ]
+                }
+              ]
+            },
+            "then": "D5_recovered"
+          }
+        ]
+      }
+    ],
+    "stability": {
+      "all": [
+        {
+          "fact": "ph",
+          "op": ">=",
+          "value": 7.3
+        },
+        {
+          "fact": "hco3",
+          "op": ">=",
+          "value": 15
+        }
+      ]
+    },
+    "debrief": [
+      {
+        "id": "fluid-good",
+        "checkpoint": "T0",
+        "when": {
+          "any": [
+            {
+              "fact": "nacl.band",
+              "op": "in",
+              "value": [
+                "therapeutic",
+                "high"
+              ]
+            },
+            {
+              "fact": "hartmann.band",
+              "op": "in",
+              "value": [
+                "therapeutic",
+                "high"
+              ]
+            }
+          ]
+        },
+        "verdict": "good",
+        "about": "nacl",
+        "category": "management",
+        "points": 3,
+        "text": "Fluid first. A litre of 0.9% saline in the first hour restores circulating volume, then slower bags.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fluid replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+            "section": "Diabetes mellitus: diabetic ketoacidosis",
+            "year": 2023
+          }
+        ]
+      },
+      {
+        "id": "fluid-miss",
+        "checkpoint": "T0",
+        "when": {
+          "not": {
+            "any": [
+              {
+                "fact": "nacl.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              },
+              {
+                "fact": "hartmann.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            ]
+          }
+        },
+        "verdict": "miss",
+        "about": "nacl",
+        "category": "management",
+        "points": 0,
+        "penalty": 3,
+        "text": "Not enough fluid. She is around 6 L down; insulin without volume replacement keeps her shocked and the kidneys dry.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fluid replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Fluid therapy",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          }
+        ]
+      },
+      {
+        "id": "insulin-good",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "insulin@iv_infusion.band",
+          "op": "in",
+          "value": [
+            "therapeutic"
+          ]
+        },
+        "verdict": "good",
+        "about": "insulin",
+        "category": "management",
+        "points": 3,
+        "text": "Fixed-rate IV insulin at about 0.1 U/kg/h, no bolus needed.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fixed-rate IV insulin infusion",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Insulin therapy",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          }
+        ]
+      },
+      {
+        "id": "insulin-high",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "insulin@iv_infusion.band",
+          "op": "in",
+          "value": [
+            "high"
+          ]
+        },
+        "verdict": "miss",
+        "about": "insulin",
+        "category": "management",
+        "points": 0,
+        "text": "Rate too high. Glucose and potassium fall too fast; 0.1 U/kg/h is enough.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fixed-rate IV insulin infusion",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "insulin-bolus",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "insulin@iv_bolus.given",
+          "op": "==",
+          "value": true
+        },
+        "verdict": "miss",
+        "about": "insulin",
+        "category": "management",
+        "points": 0,
+        "text": "An IV insulin bolus is not needed when a fixed-rate infusion is started promptly.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fixed-rate IV insulin infusion",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Insulin therapy",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          }
+        ]
+      },
+      {
+        "id": "insulin-sc-only",
+        "checkpoint": "T0",
+        "when": {
+          "all": [
+            {
+              "fact": "insulin@sc.given",
+              "op": "==",
+              "value": true
+            },
+            {
+              "not": {
+                "fact": "insulin@iv_infusion.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            }
+          ]
+        },
+        "verdict": "miss",
+        "about": "insulin",
+        "category": "management",
+        "points": 0,
+        "penalty": 3,
+        "text": "Subcutaneous insulin alone is not reliable in severe DKA with poor perfusion. Use an IV infusion.",
+        "cite": [
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Insulin therapy",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          },
+          {
+            "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+            "section": "Diabetes mellitus: diabetic ketoacidosis",
+            "year": 2023
+          }
+        ]
+      },
+      {
+        "id": "kcl-good",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "kcl.band",
+          "op": "in",
+          "value": [
+            "therapeutic",
+            "high"
+          ]
+        },
+        "verdict": "good",
+        "about": "kcl",
+        "category": "management",
+        "points": 3,
+        "text": "Potassium added. K+ 4.6 is in the 3.5 to 5.5 range, so add 40 mmol/L to each litre once urine is flowing.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Potassium replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Potassium",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          }
+        ]
+      },
+      {
+        "id": "kcl-miss",
+        "checkpoint": "T0",
+        "when": {
+          "not": {
+            "fact": "kcl.band",
+            "op": "in",
+            "value": [
+              "therapeutic",
+              "high"
+            ]
+          }
+        },
+        "verdict": "miss",
+        "about": "kcl",
+        "category": "management",
+        "points": 0,
+        "penalty": 3,
+        "text": "No potassium. K+ 4.6 looks normal but total body potassium is low; insulin drives it into cells and it falls within hours.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Potassium replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Potassium",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          },
+          {
+            "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+            "section": "Diabetes mellitus: diabetic ketoacidosis",
+            "year": 2023
+          }
+        ]
+      },
+      {
+        "id": "glargine-good",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "glargine.given",
+          "op": "==",
+          "value": true
+        },
+        "verdict": "good",
+        "about": "glargine",
+        "category": "management",
+        "points": 1,
+        "text": "Continuing long-acting insulin alongside the infusion prevents rebound when the drip stops.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Long-acting insulin",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "bicarb-miss",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "bicarb.given",
+          "op": "==",
+          "value": true
+        },
+        "verdict": "miss",
+        "about": "bicarb",
+        "category": "management",
+        "points": 0,
+        "text": "Bicarbonate is not recommended at pH 7.08. It worsens hypokalaemia and gives no proven benefit above pH 7.0.",
+        "cite": [
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Bicarbonate",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          },
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Bicarbonate",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "abx-miss",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "ceftriaxone.given",
+          "op": "==",
+          "value": true
+        },
+        "verdict": "miss",
+        "about": "ceftriaxone",
+        "category": "management",
+        "points": 0,
+        "text": "No evidence of infection here (CRP 6, clear chest, clean urine). The trigger was missed insulin.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Precipitating causes",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "mon-good",
+        "checkpoint": "T0",
+        "when": {
+          "all": [
+            {
+              "fact": "mon_grbs.given",
+              "op": "==",
+              "value": true
+            },
+            {
+              "fact": "mon_vbg.given",
+              "op": "==",
+              "value": true
+            }
+          ]
+        },
+        "verdict": "good",
+        "about": "general",
+        "category": "monitoring",
+        "points": 4,
+        "text": "Hourly glucose and regular VBG with K+ are the minimum for safe titration.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Monitoring",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "mon-miss",
+        "checkpoint": "T0",
+        "when": {
+          "not": {
+            "all": [
+              {
+                "fact": "mon_grbs.given",
+                "op": "==",
+                "value": true
+              },
+              {
+                "fact": "mon_vbg.given",
+                "op": "==",
+                "value": true
+              }
+            ]
+          }
+        },
+        "verdict": "miss",
+        "about": "general",
+        "category": "monitoring",
+        "points": 0,
+        "text": "Without hourly glucose and regular K+ checks, a falling potassium or glucose is found late.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Monitoring",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "diuretic-harm",
+        "checkpoint": "T0",
+        "when": {
+          "fact": "furosemide.given",
+          "op": "==",
+          "value": true
+        },
+        "verdict": "miss",
+        "about": "furosemide",
+        "category": "safety",
+        "points": 0,
+        "text": "Never give a diuretic to a volume-depleted DKA patient.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Fluid replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "dex-good",
+        "checkpoint": "6h",
+        "when": {
+          "all": [
+            {
+              "fact": "glucose",
+              "op": "<",
+              "value": 14
+            },
+            {
+              "fact": "dex10.given",
+              "op": "==",
+              "value": true
+            }
+          ]
+        },
+        "verdict": "good",
+        "about": "dex10",
+        "category": "monitoring",
+        "points": 3,
+        "text": "Glucose under 14: 10% glucose added alongside saline so insulin can keep clearing ketones.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Glucose below 14 mmol/L",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "dex-miss",
+        "checkpoint": "6h",
+        "when": {
+          "all": [
+            {
+              "fact": "glucose",
+              "op": "<",
+              "value": 14
+            },
+            {
+              "not": {
+                "fact": "dex10.given",
+                "op": "==",
+                "value": true
+              }
+            }
+          ]
+        },
+        "verdict": "miss",
+        "about": "dex10",
+        "category": "monitoring",
+        "points": 0,
+        "text": "Glucose was under 14 mmol/L. Without 10% glucose, continued insulin causes hypoglycaemia.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Glucose below 14 mmol/L",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA/EASD/JBDS/AACE/DTS), Diabetes Care",
+            "section": "Insulin therapy",
+            "year": 2024,
+            "url": "https://diabetesjournals.org/care/article/47/8/1257/156808"
+          }
+        ]
+      },
+      {
+        "id": "k6-good",
+        "checkpoint": "6h",
+        "when": {
+          "fact": "kcl.band",
+          "op": "in",
+          "value": [
+            "therapeutic",
+            "high"
+          ]
+        },
+        "verdict": "good",
+        "about": "kcl",
+        "category": "monitoring",
+        "points": 2,
+        "text": "Potassium continued while insulin runs.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Potassium replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "k6-miss",
+        "checkpoint": "6h",
+        "when": {
+          "all": [
+            {
+              "fact": "k",
+              "op": "<",
+              "value": 4.5
+            },
+            {
+              "not": {
+                "fact": "kcl.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            }
+          ]
+        },
+        "verdict": "miss",
+        "about": "kcl",
+        "category": "monitoring",
+        "points": 0,
+        "penalty": 2,
+        "text": "K+ was falling and no potassium was running. This is what caused the arrhythmia risk on day 2.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Potassium replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+            "section": "Diabetes mellitus: diabetic ketoacidosis",
+            "year": 2023
+          }
+        ]
+      },
+      {
+        "id": "stop-early",
+        "checkpoint": "6h",
+        "when": {
+          "all": [
+            {
+              "fact": "ph",
+              "op": "<",
+              "value": 7.3
+            },
+            {
+              "not": {
+                "fact": "insulin@iv_infusion.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            }
+          ]
+        },
+        "verdict": "miss",
+        "about": "insulin",
+        "category": "monitoring",
+        "points": 0,
+        "text": "The infusion was stopped before DKA resolved (ketones under 0.6 and pH over 7.3).",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Resolution of DKA",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "switch-good",
+        "checkpoint": "D2",
+        "when": {
+          "all": [
+            {
+              "fact": "resolved",
+              "op": "==",
+              "value": true
+            },
+            {
+              "fact": "glargine.given",
+              "op": "==",
+              "value": true
+            },
+            {
+              "fact": "insulin@sc.given",
+              "op": "==",
+              "value": true
+            }
+          ]
+        },
+        "verdict": "good",
+        "about": "insulin",
+        "category": "monitoring",
+        "points": 3,
+        "text": "DKA resolved and eating: back to SC basal-bolus. Stop the drip 30 to 60 minutes after the first SC mealtime dose.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Converting to subcutaneous insulin",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "switch-miss",
+        "checkpoint": "D2",
+        "when": {
+          "all": [
+            {
+              "fact": "resolved",
+              "op": "==",
+              "value": true
+            },
+            {
+              "not": {
+                "fact": "insulin@sc.given",
+                "op": "==",
+                "value": true
+              }
+            },
+            {
+              "not": {
+                "fact": "insulin@iv_infusion.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            }
+          ]
+        },
+        "verdict": "miss",
+        "about": "insulin",
+        "category": "monitoring",
+        "points": 0,
+        "text": "IV insulin was stopped without SC cover, so ketosis returned.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Converting to subcutaneous insulin",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "hypok-treat",
+        "checkpoint": "D2",
+        "when": {
+          "all": [
+            {
+              "fact": "hypok",
+              "op": "==",
+              "value": true
+            },
+            {
+              "fact": "kcl.band",
+              "op": "in",
+              "value": [
+                "therapeutic",
+                "high"
+              ]
+            }
+          ]
+        },
+        "verdict": "good",
+        "about": "kcl",
+        "category": "monitoring",
+        "points": 2,
+        "text": "Hypokalaemia recognised and potassium replaced with cardiac monitoring.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Potassium replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          }
+        ]
+      },
+      {
+        "id": "hypok-missed",
+        "checkpoint": "D2",
+        "when": {
+          "all": [
+            {
+              "fact": "hypok",
+              "op": "==",
+              "value": true
+            },
+            {
+              "not": {
+                "fact": "kcl.band",
+                "op": "in",
+                "value": [
+                  "therapeutic",
+                  "high"
+                ]
+              }
+            }
+          ]
+        },
+        "verdict": "miss",
+        "about": "kcl",
+        "category": "monitoring",
+        "points": 0,
+        "penalty": 3,
+        "text": "K+ 3.1 with U waves and no replacement led to ventricular arrhythmia.",
+        "cite": [
+          {
+            "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+            "section": "Potassium replacement",
+            "year": 2023,
+            "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+          },
+          {
+            "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+            "section": "Diabetes mellitus: diabetic ketoacidosis",
+            "year": 2023
+          }
+        ]
+      }
+    ],
+    "vivaQuestion": {
+      "q": "Why must potassium be replaced in DKA even when serum K+ is normal on arrival?",
+      "a": "Osmotic diuresis and vomiting deplete total body potassium. Acidosis and lack of insulin shift potassium out of cells, so the serum level looks normal or high. Insulin and correction of acidosis move potassium back into cells, and serum K+ falls quickly unless it is replaced.",
+      "cite": [
+        {
+          "source": "JBDS-IP: The Management of Diabetic Ketoacidosis in Adults",
+          "section": "Potassium replacement",
+          "year": 2023,
+          "url": "https://abcd.care/joint-british-diabetes-societies-jbds-inpatient-care-group"
+        },
+        {
+          "source": "Davidson's Principles and Practice of Medicine, 24th ed.",
+          "section": "Diabetes mellitus: diabetic ketoacidosis",
+          "year": 2023
+        }
+      ]
+    },
+    "passMark": 30,
+    "discharge": {
+      "recovered": "Discharged on basal-bolus insulin. Sick-day rules taught. Diabetes clinic in 2 weeks.",
+      "complication": "Discharged on basal-bolus insulin after a complication during admission. Sick-day rules taught. Diabetes clinic in 1 week.",
+      "icu": "Transferred to the intensive care unit.",
+      "died": "Died in hospital."
+    }
+  },
+  "history": [
+    {
+      "at": 1793108757039,
+      "who": "system",
+      "action": "imported",
+      "note": "Seeded from built-in pilot case"
+    }
+  ],
+  "updatedAt": 1793108757039
+}

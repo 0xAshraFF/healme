@@ -1,0 +1,61 @@
+/* Tokens mirror DESIGN.md. Blue = the player's own writing. Red = the patient getting worse. */
+:root {
+  --ground: #e4ebdd;
+  --paper: #f7f8f2;
+  --rule: #b9cbb8;
+  --rule-soft: #d6e0d3;
+  --ink: #2f3532;
+  --ink-2: #5e6862;
+  --ink-3: #8a948d;
+  --blue: #1d3c8f;
+  --blue-soft: #e3e8f5;
+  --red: #c0262d;
+  --red-soft: #f6e1e0;
+  --amber: #f2d45c;
+  --green: #2e6b47;
+  --field: #ffffff;
+  --on-blue: #ffffff;
+
+  --head: "Anek Latin", "Atkinson Hyperlegible Next", sans-serif;
+  --body: "Atkinson Hyperlegible Next", sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", ui-monospace, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #161b19;
+    --paper: #20271f;
+    --rule: #3a4639;
+    --rule-soft: #2c362c;
+    --ink: #dce3da;
+    --ink-2: #a7b2a9;
+    --ink-3: #7c877f;
+    --blue: #8fa8f0;
+    --blue-soft: #26304a;
+    --red: #ff6b6b;
+    --red-soft: #3a2222;
+    --amber: #8a7428;
+    --field: #1a2019;
+    --on-blue: #10151a;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--ground); color: var(--ink); }
+body {
+  font-family: var(--body);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+a { color: inherit; }
+
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--ink-2); }
+.faint { color: var(--ink-3); }
+.hi { color: var(--red); font-weight: 700; }
+.ink { color: var(--blue); font-family: var(--mono); }
